@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C266BE82-8ED7-4386-8B95-6029B5358B26}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>AntiAliasingEvaluation</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140_xp</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140_xp</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\libs\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_WIN32;PLATFORM=OPENGLES;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\include\Inc;..\include\Framework;..\include\Framework\Win32;..\include\Framework\OpenGLES;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\libs\$(PlatformName)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libEGL.lib;libGLESv2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\include\Framework\FrmApplication.cpp" />
+    <ClCompile Include="..\include\Framework\FrmFont.cpp" />
+    <ClCompile Include="..\include\Framework\FrmInput.cpp" />
+    <ClCompile Include="..\include\Framework\FrmPackedResource.cpp" />
+    <ClCompile Include="..\include\Framework\FrmUserInterface.cpp" />
+    <ClCompile Include="..\include\Framework\FrmUtils.cpp" />
+    <ClCompile Include="..\include\Framework\OpenGLES\FrmFontGLES.cpp" />
+    <ClCompile Include="..\include\Framework\OpenGLES\FrmMesh.cpp" />
+    <ClCompile Include="..\include\Framework\OpenGLES\FrmPackedResourceGLES.cpp" />
+    <ClCompile Include="..\include\Framework\OpenGLES\FrmResourceGLES.cpp" />
+    <ClCompile Include="..\include\Framework\OpenGLES\FrmShader.cpp" />
+    <ClCompile Include="..\include\Framework\OpenGLES\FrmUserInterfaceGLES.cpp" />
+    <ClCompile Include="..\include\Framework\OpenGLES\FrmUtilsGLES.cpp" />
+    <ClCompile Include="..\include\Framework\Win32\FrmApplication_Platform.cpp" />
+    <ClCompile Include="..\include\Framework\Win32\FrmFile_Platform.cpp" />
+    <ClCompile Include="..\include\Framework\Win32\FrmNoise_Platform.cpp" />
+    <ClCompile Include="..\include\Framework\Win32\FrmPlatform.cpp" />
+    <ClCompile Include="..\include\Framework\Win32\FrmStdlib_Platform.cpp" />
+    <ClCompile Include="..\include\Framework\Win32\FrmUtils_Platform.cpp" />
+    <ClCompile Include="Application.cpp" />
+    <ClCompile Include="FrameBufferObject.cpp" />
+    <ClCompile Include="ModelRenderer.cpp" />
+    <ClCompile Include="ScreenRenderer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\Framework\FrmApplication.h" />
+    <ClInclude Include="..\include\Framework\FrmFile.h" />
+    <ClInclude Include="..\include\Framework\FrmFont.h" />
+    <ClInclude Include="..\include\Framework\FrmInput.h" />
+    <ClInclude Include="..\include\Framework\FrmMath.h" />
+    <ClInclude Include="..\include\Framework\FrmNoise.h" />
+    <ClInclude Include="..\include\Framework\FrmPackedResource.h" />
+    <ClInclude Include="..\include\Framework\FrmResource.h" />
+    <ClInclude Include="..\include\Framework\FrmStdLib.h" />
+    <ClInclude Include="..\include\Framework\FrmUserInterface.h" />
+    <ClInclude Include="..\include\Framework\FrmUtils.h" />
+    <ClInclude Include="..\include\Framework\OpenGLES\FrmFontGLES.h" />
+    <ClInclude Include="..\include\Framework\OpenGLES\FrmMesh.h" />
+    <ClInclude Include="..\include\Framework\OpenGLES\FrmPackedResourceGLES.h" />
+    <ClInclude Include="..\include\Framework\OpenGLES\FrmResourceGLES.h" />
+    <ClInclude Include="..\include\Framework\OpenGLES\FrmShader.h" />
+    <ClInclude Include="..\include\Framework\OpenGLES\FrmUserInterfaceGLES.h" />
+    <ClInclude Include="..\include\Framework\OpenGLES\FrmUtilsGLES.h" />
+    <ClInclude Include="..\include\Framework\Win32\FrmPlatform.h" />
+    <ClInclude Include="Application.h" />
+    <ClInclude Include="FrameBufferObject.h" />
+    <ClInclude Include="ModelRenderer.h" />
+    <ClInclude Include="Renderer.h" />
+    <ClInclude Include="ScreenRenderer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\include\Framework\Win32\FrmMath_Platform.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\include\Framework\Win32\Adreno.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
